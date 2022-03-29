@@ -33,14 +33,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          template: markdown
-          filename: metrics.markdown.md
-          markdown: >-
-            https://raw.githubusercontent.com/lowlighter/metrics/examples/metrics.markdown.template.md
-          config_output: markdown
-          # Options
-          user: songww
-          base: header, metadata
+          template: classic
           config_timezone: Asia/Shanghai
           plugin_activity: yes
           plugin_activity_days: 14
