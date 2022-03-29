@@ -32,9 +32,14 @@ jobs:
         uses: lowlighter/metrics@v3.22
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+
+          template: markdown
+          filename: metrics.markdown.md
+          markdown: >-
+            https://raw.githubusercontent.com/lowlighter/metrics/examples/metrics.markdown.template.md
+          config_output: markdown
           # Options
           user: songww
-          template: classic
           base: header, metadata
           config_timezone: Asia/Shanghai
           plugin_activity: yes
@@ -72,7 +77,7 @@ jobs:
           plugin_reactions_limit_discussions: 100
           plugin_reactions_limit_discussions_comments: 100
           plugin_reactions_limit_issues: 100
-          plugin_skyline: yes
+          plugin_skyline: no
           plugin_skyline_frames: 60
           plugin_skyline_quality: 0.5
           plugin_skyline_year: current-year
