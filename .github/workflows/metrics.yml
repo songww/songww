@@ -4,8 +4,8 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Schedule updates (each hour)
-  schedule: [{cron: "0 12,24 * * *"}]
+  # Schedule updates (11:00 and 23:00 UTC every day)
+  schedule: [{cron: "0 11,23 * * *"}]
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
